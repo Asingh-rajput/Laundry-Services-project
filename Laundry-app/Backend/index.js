@@ -16,7 +16,7 @@ const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
-const port = 8090 || process.env.PORT;
+const port = 8080 || process.env.PORT;
 mongoose
   .connect(uri, options)
   .then(() => console.log("Connected to MongoDB"))
@@ -65,6 +65,6 @@ app.get('/', async (req, res) => {
    return res.json(orders)
 })
 
-app.listen(8090, () => {
+app.listen(8080, () => {
   console.log(`server starting up port ${port}!`);
 });
